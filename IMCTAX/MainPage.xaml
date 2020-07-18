@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:IMCTAX"
+    x:Class="IMCTAX.MainPage">
+    <ScrollView
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Padding="10"
+            RowSpacing="20"
+            ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+                <RowDefinition
+                    Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width=".30*"></ColumnDefinition>
+                <ColumnDefinition
+                    Width=".70*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label
+                Text="Select State"
+                Grid.Column="0"
+                Grid.Row="0"
+                LineBreakMode="NoWrap"
+                HorizontalOptions="End"
+                VerticalOptions="Center"></Label>
+            <Picker
+                x:Name="ratePicker"
+                Title="Select Tax Rate"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="AliceBlue"
+                VerticalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="1"
+                ItemsSource="{x:Static local:App.USTaxRates}"></Picker>
+            <Label
+                Text="State"
+                Grid.Column="0"
+                Grid.Row="1"
+                LineBreakMode="NoWrap"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                x:Name="stateRateLabel"
+                IsVisible="false"></Label>
+            <Label
+                x:Name="taxRateLabel"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="AliceBlue"
+                TextColor="Maroon"
+                IsVisible="false"></Label>
+
+            <Label
+                Text="Average"
+                Grid.Column="0"
+                Grid.Row="2"
+                LineBreakMode="NoWrap"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                x:Name="averageLabel"
+                IsVisible="false"></Label>
+            <Label
+                x:Name="averageTaxLabel"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="AliceBlue"
+                TextColor="Maroon"
+                IsVisible="false"></Label>
+
+            <Label
+                Text="Description"
+                Grid.Column="0"
+                Grid.Row="3"
+                HorizontalOptions="End"></Label>
+            <Label
+                Text="BKC TK219 12.2' Tandem Fishing Kayak W/ Soft Padded Seats, Paddles,6 Rod Holders Included 2-3 Person Angler kayak"
+                Grid.Column="1"
+                Grid.Row="3"
+                FontAttributes="Bold"></Label>
+            <Label
+                Text="Blue Kayak"
+                Grid.Column="0"
+                Grid.Row="4"
+                HorizontalOptions="End"></Label>
+            <Image
+                x:Name="sellImage"
+                Aspect="AspectFit"
+                Grid.Column="1"
+                Grid.Row="4"
+                Source="boat.jpg"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                HeightRequest="200"></Image>
+
+            <Label
+                Text="Price"
+                Grid.Column="0"
+                Grid.Row="5"
+                HorizontalOptions="End"></Label>
+            <Label
+                Grid.Column="1"
+                Grid.Row="5"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Text="$895.99"
+                FontAttributes="Bold"></Label>
+
+
+
+            <Label
+                Text="Total Tax"
+                Grid.Column="0"
+                Grid.Row="6"
+                HorizontalOptions="End"></Label>
+
+            <Label
+                Grid.Column="1"
+                Grid.Row="6"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Text="$00.00"
+                FontAttributes="Bold"
+                x:Name="totalTaxLabel"></Label>
+
+
+            <Label
+                Text="Total With Tax"
+                Grid.Column="0"
+                Grid.Row="7"
+                HorizontalOptions="End"></Label>
+            <Label
+                Grid.Column="1"
+                Grid.Row="7"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Text="$000.00"
+                FontAttributes="Bold"
+                TextColor="Maroon"
+                x:Name="totalPriceLabel"></Label>
+
+            <Button
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Grid.Row="8"
+                Text="Submit Order"
+                IsEnabled="False"
+                x:Name="submitButton"
+                BackgroundColor="Beige"
+                BorderColor="Maroon"
+                CornerRadius="0"
+                Clicked="submitButton_Clicked"></Button>
+
+
+        </Grid>
+    </ScrollView>
+
+
+
+</ContentPage>
